@@ -103,6 +103,7 @@ colPerc(table1)
 ```
 
 ## LGBTQ
+
 ```{r}
 FinalDat<-read.csv(file="final_Data.csv")
 ```
@@ -116,3 +117,12 @@ LGBTQ<-select(LGBTQ, -sex)
 
 ## Druggies
 
+```{r}
+FinalDat<-read.csv(file="final_Data.csv")
+```
+```{r}
+DrugUser<-filter(FinalDat,sex=="F")
+```
+```{r}
+DrugUser<-select(DrugUser, -sex)
+```
