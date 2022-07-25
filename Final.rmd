@@ -36,6 +36,7 @@ Males<-filter(FinalDat,sex=="M")
 Males<-select(Males, -sex)
 ```
 
+
 ```{r}
 dd2 <- Males %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
@@ -51,12 +52,46 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
+  
+  
+  
+  
+```{r}
+table1 <- xtabs(~infected + treatment, data=Males)
+rowPerc(table1)
+colPerc(table1)
+```
+  
 
 ## Females
 
+```{r}
+FinalDat<-read.csv(file="final_Data.csv")
+```
+```{r}
+Females<-filter(FinalDat,sex=="F")
+```
+```{r}
+Females<-select(Females, -sex)
+```
+
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=Females)
+rowPerc(table1)
+colPerc(table1)
+```
 
 ## LGBTQ
-
+```{r}
+FinalDat<-read.csv(file="final_Data.csv")
+```
+```{r}
+LGBTQ<-filter(FinalDat,sex=="F")
+```
+```{r}
+LGBTQ<-select(LGBTQ, -sex)
+```
 
 
 ## Druggies
