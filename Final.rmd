@@ -36,6 +36,7 @@ Males<-filter(FinalDat,sex=="M")
 Males<-select(Males, -sex)
 ```
 
+#BarPlot
 
 ```{r}
 dd2 <- Males %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
@@ -52,8 +53,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
-
-  
+#Numerical  
   
 ```{r}
 table1 <- xtabs(~infected + treatment, data=Males)
@@ -61,7 +61,12 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-  
+#Inferential
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
   
   
   
@@ -102,6 +107,15 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+
 ## LGBTQ
 
 ```{r}
@@ -109,6 +123,8 @@ FinalDat<-read.csv(file="final_Data.csv")
 ```
 ```{r}
 LGBTQ<-filter(FinalDat,sex=="F")
+LGBTQ<-filter(FinalDat,sex=="M")
+
 ```
 ```{r}
 LGBTQ<-select(LGBTQ, -sex)
@@ -122,6 +138,8 @@ FinalDat<-read.csv(file="final_Data.csv")
 ```
 ```{r}
 DrugUser<-filter(FinalDat,sex=="F")
+DrugUser<-filter(FinalDat,sex=="M")
+
 ```
 ```{r}
 DrugUser<-select(DrugUser, -sex)
