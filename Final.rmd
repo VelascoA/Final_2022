@@ -103,17 +103,17 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=Females)
-rowPerc(table1)
-colPerc(table1)
+table2 <- xtabs(~infected + treatment, data=Females)
+rowPerc(table2)
+colPerc(table2)
 ```
 
 ## Inferential Results 
 
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
 ```
 
 ## Conclusion
@@ -125,8 +125,7 @@ fisher.test(table1)
 FinalDat<-read.csv(file="final_Data.csv")
 ```
 ```{r}
-LGBTQ<-filter(FinalDat,sex=="F")
-LGBTQ<-filter(FinalDat,sex=="M")
+LGBTQ<-filter(FinalDat,LGBTQ=="gay")
 
 ```
 ```{r}
