@@ -121,19 +121,19 @@ fishtestf
 odd ratio tells us that those  who took P are 1.43% less like to contract than those who took vaccine, p value shows if there were no difference between females who took p and took V 
 str(fishtestf) in console gives more info
 
-##Ethics 
+## Efficacy  
 
 ```{r}
 options(digits = 1)
 femeffic= fishtestf$estimate/(1+fishtestf$estimate)*100
-femefficlo=fishtestf$conf.int[1]/(1+fishtestf$conf.int[1]*100)
-femeffichi=fishtestf$conf.int[2]/(1+fishtestf$conf.int[2]*100)
+femefficlo=fishtestf$conf.int[1]/(1+fishtestf$conf.int[1])*100
+femeffichi=fishtestf$conf.int[2]/(1+fishtestf$conf.int[2])*100
 print(femeffic)
 print(femefficlo)
 print(femeffichi)
 ```
 
-come back to hi and lo are not giving whole numbers retype it 
+ 
 `r femefficlo`  `r femeffichi`
 
 ## Conclusion
