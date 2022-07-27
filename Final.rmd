@@ -66,6 +66,7 @@ colPerc(table1)
 chisq.test(table1)
 chisqtestGC(table1)
 fishtestM<-fisher.test(table1)
+fishtestM
 ```
   
 ## Efficacy 
@@ -186,11 +187,29 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
+3% who take V still got Covid 
 
 ## Inferental
 
+```{r}
+chisq.test(table3)
+chisqtestGC(table3)
+fishtestG<-fisher.test(table3)
+fishtestG
+```
+
 ## Efficacy
 
+
+```{r}
+options(digits = 1)
+Geffic= fishtestG$estimate/(1+fishtestG$estimate)*100
+Gefficlo=fishtestG$conf.int[1]/(1+fishtestG$conf.int[1])*100
+Geffichi=fishtestG$conf.int[2]/(1+fishtestG$conf.int[2])*100
+print(Geffic)
+print(Gefficlo)
+print(Geffichi)
+```
 ## Conclusion
 
 # Druggies
