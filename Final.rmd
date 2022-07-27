@@ -198,6 +198,8 @@ fishtestG<-fisher.test(table3)
 fishtestG
 ```
 
+odds being .1 tell us that P takers are .1 times more likey to contract
+
 ## Efficacy
 
 
@@ -210,6 +212,8 @@ print(Geffic)
 print(Gefficlo)
 print(Geffichi)
 ```
+13% effective
+
 ## Conclusion
 
 # Druggies
