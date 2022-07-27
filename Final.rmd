@@ -53,7 +53,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
-## Numerical results  
+## Numerical Results  
   
 ```{r}
 table1 <- xtabs(~infected + treatment, data=Males)
@@ -61,7 +61,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-## Inferential results
+## Inferential Results
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
@@ -72,12 +72,12 @@ fishtestM<-fisher.test(table1)
 
 ```{r}
 options(digits = 1)
-femeffic= fishtestM$estimate/(1+fishtestM$estimate)*100
-femefficlo=fishtestM$conf.int[1]/(1+fishtestM$conf.int[1])*100
-femeffichi=fishtestM$conf.int[2]/(1+fishtestM$conf.int[2])*100
-print(femeffic)
-print(femefficlo)
-print(femeffichi)
+maleffic= fishtestM$estimate/(1+fishtestM$estimate)*100
+malefficlo=fishtestM$conf.int[1]/(1+fishtestM$conf.int[1])*100
+maleffichi=fishtestM$conf.int[2]/(1+fishtestM$conf.int[2])*100
+print(maleffic)
+print(malefficlo)
+print(maleffichi)
 ```
   
   
@@ -95,7 +95,7 @@ Females<-filter(FinalDat,sex=="F")
 Females<-select(Females, -sex)
 ```
 
-## Grapical results
+## Grapical Results
 
 ```{r}
 dd2 <- Females %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
@@ -147,7 +147,7 @@ print(femeffichi)
 ```
 
  
-`r femefficlo`  `r femeffichi`
+  text `r femefficlo`  `r femeffichi` text
 
 ## Conclusion
 
@@ -155,26 +155,48 @@ print(femeffichi)
 # LGBTQ
 
 ```{r}
-FinalDat<-read.csv(file="final_Data.csv")
-```
-```{r}
-LGBTQ<-filter(FinalDat,LGBTQ=="gay")
+LGBTQ<-filter(FinalData,LGBTQ=="gay")
 
 ```
+
+
+## Graphical Results
+
 ```{r}
-LGBTQ<-select(LGBTQ, -sex)
+dd2 <- LGBTQ %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+
+## Numerical Results
+
+```{r}
+table3 <- xtabs(~infected + treatment, data=LGBTQ)
+rowPerc(table3)
+colPerc(table3)
+```
+
+
+## Inferental
+
+## Efficacy
+
+## Conclusion
 
 # Druggies
 
 ```{r}
-FinalDat<-read.csv(file="final_Data.csv")
-```
-```{r}
-DrugUser<-filter(FinalDat,DrugUser=="yes")
+DrugUser<-filter(FinalData,DrugUser=="yes")
 
 ```
-```{r}
-DrugUser<-select(DrugUser, -sex)
-```
+
