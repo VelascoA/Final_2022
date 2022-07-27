@@ -65,10 +65,23 @@ colPerc(table1)
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-fisher.test(table1)
+fishtestM<-fisher.test(table1)
 ```
   
-#Conclusion
+## Efficacy 
+
+```{r}
+options(digits = 1)
+femeffic= fishtestM$estimate/(1+fishtestM$estimate)*100
+femefficlo=fishtestM$conf.int[1]/(1+fishtestM$conf.int[1])*100
+femeffichi=fishtestM$conf.int[2]/(1+fishtestM$conf.int[2])*100
+print(femeffic)
+print(femefficlo)
+print(femeffichi)
+```
+  
+  
+## Conclusion
 
 # Females
 
