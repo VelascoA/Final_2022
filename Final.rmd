@@ -202,6 +202,7 @@ print(Geffic)
 print(Gefficlo)
 print(Geffichi)
 ```
+
 13% effective
 
 ## Conclusion
@@ -239,7 +240,29 @@ colPerc(table4)
 ```
 
 ## Inferential Results 
+```{r}
+chisq.test(table4)
+chisqtestGC(table4)
+fishtestD<-fisher.test(table4)
+fishtestD
+```
 
 ## Efficacy
 
-## Conclusions 
+```{r}
+options(digits = 1)
+Deffic= fishtestD$estimate/(1+fishtestD$estimate)*100
+Defficlo=fishtestD$conf.int[1]/(1+fishtestD$conf.int[1])*100
+Deffichi=fishtestD$conf.int[2]/(1+fishtestD$conf.int[2])*100
+print(Deffic)
+print(Defficlo)
+print(Deffichi)
+```
+
+## Conclusion 
+
+
+
+
+
+# Overall final Conclusion 
