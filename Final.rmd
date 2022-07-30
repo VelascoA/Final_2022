@@ -47,6 +47,8 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
+  The graphic results in the study for males show that the COVID 19 vaccine is working. About 65% of those who took the placebo vaccine got infected with COVID, where as about 30% who were vaccinated go the virus. However about 50 % who were vaccinated remained uninfected.  
+  
 ## Numerical Results  
   
 ```{r}
@@ -54,6 +56,7 @@ table1 <- xtabs(~infected + treatment, data=Males)
 rowPerc(table1)
 colPerc(table1)
 ```
+  The numerical results for males show 3% of those who had the placebo vaccine were infected with the virus and  only 1% who recived the COVID 19 vaccine caught the virus. 
   
 ## Inferential Results
 ```{r}
@@ -62,6 +65,8 @@ chisqtestGC(table1)
 fishtestM<-fisher.test(table1)
 fishtestM
 ```
+
+The inferential results for males show us the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID 19. The p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine.  
   
 ## Efficacy 
 
@@ -74,9 +79,10 @@ print(maleffic)
 print(malefficlo)
 print(maleffichi)
 ```
-  
+  The study shows that the vaccine with males is 59% effective, the high confidence level of `r maleffichi` and the lowest confidence interval of `r malefficlo`. 
   
 ## Conclusion
+
 
 # Females
 
@@ -102,7 +108,8 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-
+Graphical results for females in the vaccination study, it shows that the COVID 19 vaccine is working. Almost 60%% of those who took the placebo vaccine got infected with COVID, where as a little over 40% who were vaccinated got the virus. However about 50 % who were vaccinated remained uninfected.  
+  
 
 ## Numerical Results
 
@@ -111,6 +118,7 @@ table2 <- xtabs(~infected + treatment, data=Females)
 rowPerc(table2)
 colPerc(table2)
 ```
+  The numerical results for females show both groups, vaccinated and the placebo, in the study had 2% got infected with the COVID 19 virus. 
 
 
 ## Inferential Results 
@@ -122,9 +130,8 @@ fishtestf<-fisher.test(table2)
 fishtestf
 ```
 
-odd ratio tells us that those  who took P are 1.43% less like to contract than those who took vaccine, p value shows if there were no difference between females who took p and took V 
-str(fishtestf) in console gives more info
-
+ The odd ratio tells us that females who took the placebo are 1.43% less like to contract than those who received the vaccine.The p value shows if there were no difference between females who took placebo and the COVID 19 vaccine. 
+ 
 ## Efficacy  
 
 ```{r}
@@ -137,9 +144,9 @@ print(femefficlo)
 print(femeffichi)
 ```
 
+The study shows that the vaccine with females is 59% effective. With the high confidence level of `r femeffichi` and a low confidence level of `r femefficlo`.
  
-  text `r femefficlo`  `r femeffichi` text
-
+  
 ## Conclusion
 
 
@@ -189,7 +196,7 @@ fishtestG
 ```
 
 odds being .1 tell us that P takers are .1 times more likey to contract
-
+str(fishtestf) in console gives more info
 ## Efficacy
 
 
@@ -202,7 +209,6 @@ print(Geffic)
 print(Gefficlo)
 print(Geffichi)
 ```
-
 13% effective
 
 ## Conclusion
@@ -246,6 +252,7 @@ chisqtestGC(table4)
 fishtestD<-fisher.test(table4)
 fishtestD
 ```
+
 
 ## Efficacy
 
