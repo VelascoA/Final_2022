@@ -197,7 +197,7 @@ fishtestG
 ```
 
 
-From the inferential results the fisher exact test gives odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. 
+From the inferential results the fisher exact test gives odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. The P value remaining so small shows how if there were to be no diffrence within the results. 
 
 ## Efficacy
 
@@ -239,6 +239,8 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+The graphical results for those who use drugs is ineffective. With 85% of those eho took the vaccinece still contracting COVID and only about 15% of those who took the placebo getting the vurus. Proving that that the vaccination is no good for drug users.
+
 
 ## Numerical Results
 ```{r}
@@ -246,6 +248,8 @@ table4 <- xtabs(~infected + treatment, data=DrugUser)
 rowPerc(table4)
 colPerc(table4)
 ```
+
+The numerical results for the drug users in the study show 3% of those who received the vaccine contracted COVID where .6% of those with the placebo vaccination received COVID. 97% of those vaccinated with the vaccine remained okay but 99.4% of those who were given the placebo remained okay. Showing that the vaccine for drug users was ineffective. 
 
 ## Inferential Results 
 ```{r}
@@ -255,7 +259,7 @@ fishtestD<-fisher.test(table4)
 fishtestD
 ```
 
-str(fishtestf) in console gives more info
+The inferential results give us the odds ratio of .2 with and estimated .178 telling us that those who received the placebo  are .178 times more likely to contract the virus. The P value remaining so small shows how if there were to be no difference within the results. 
 
 ## Efficacy
 
@@ -268,6 +272,7 @@ print(Deffic)
 print(Defficlo)
 print(Deffichi)
 ```
+The efficacy test shows the vaccine fir the LGBTQ community is 15% effective. Having the highest confidence levels of `r Deffichi` and the smallest confidence intervals of `r Defficlo`. 
 
 ## Conclusion 
 
