@@ -79,10 +79,12 @@ print(maleffic)
 print(malefficlo)
 print(maleffichi)
 ```
+  
   The study shows that the vaccine with males is 59% effective, the high confidence level of `r maleffichi` and the lowest confidence interval of `r malefficlo`. 
   
 ## Conclusion
 
+The study is attempting to see how effective a COVID19 vaccination is, then breaking it down into different categories such as male. With males conducted in the study it can be see through the data the vaccination is highly effective. All sets of provided data support this statement. Graphical results conclude that 65% of those who took the placebo vaccine got infected with COVID, where as 30% who received the vaccine got the virus. The numerical results show 3% of those who had the placebo  were infected with the virus and 1% who received the COVID 19 vaccine caught the virus. Inferential results inform us of the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID 19. As well as the p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine. Lastly the efficacy conclusion was the vaccination was 59% effective. With all these results the COVID 19 vaccine made is highly effective when it comes to males. 
 
 # Females
 
