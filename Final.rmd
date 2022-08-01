@@ -175,6 +175,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+Graphical results for the LGBTQ community show that the vaccine is not effective. It shows this by 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID 19. 
 
 ## Numerical Results
 
@@ -184,7 +185,7 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
-3% who take V still got Covid 
+ The numerical results show 3% who got the vaccine still got COVID, were as .5% who took the placebo got COVID. More people who took the vaccine contracted virus that those who took the placebo.  
 
 ## Inferental Results
 
@@ -195,8 +196,9 @@ fishtestG<-fisher.test(table3)
 fishtestG
 ```
 
-odds being .1 tell us that P takers are .1 times more likey to contract
-str(fishtestf) in console gives more info
+
+From the inferential results the fisher exact test gives odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. 
+
 ## Efficacy
 
 
@@ -209,7 +211,7 @@ print(Geffic)
 print(Gefficlo)
 print(Geffichi)
 ```
-13% effective
+ The efficacy test shows the vaccine fir the LGBTQ community is 13% effective. Having the highest confidence levels of `r Geffichi` and the smallest confidence intervals of `r Gefficlo`. 
 
 ## Conclusion
 
@@ -253,6 +255,7 @@ fishtestD<-fisher.test(table4)
 fishtestD
 ```
 
+str(fishtestf) in console gives more info
 
 ## Efficacy
 
