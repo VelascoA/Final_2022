@@ -220,6 +220,10 @@ print(Geffichi)
 
 ## Conclusion
 
+The third group the study is divide into is LGBTQ and how the vaccination effects the community. The data shows the vaccination is not effective for those in the LGBQ community. The graphical results show 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID. Numerical results show that 3% who got the vaccine still got COVID, were as .5% who took the placebo got the virus. The inferential result show odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. The p value shows if there were o difference between those who are LGBTQ who revived the vaccine and those who received the placebo. The efficacy results conclude the vaccine is 13% effective. The vaccination is extremely less effective then for straight males and females. Overall the vaccination for the LGBTQ is worse than taking the placebo. 
+
+
+
 # Druggies
 
 ```{r}
