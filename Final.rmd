@@ -84,7 +84,7 @@ print(maleffichi)
   
 ## Conclusion
 
-The study is attempting to see how effective a COVID19 vaccination is, then breaking it down into different categories such as male. With males conducted in the study it can be see through the data the vaccination is highly effective. All sets of provided data support this statement. Graphical results conclude that 65% of those who took the placebo vaccine got infected with COVID, where as 30% who received the vaccine got the virus. The numerical results show 3% of those who had the placebo  were infected with the virus and 1% who received the COVID 19 vaccine caught the virus. Inferential results inform us of the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID 19. As well as the p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine. Lastly the efficacy conclusion was the vaccination was 59% effective. With all these results the COVID 19 vaccine made is highly effective when it comes to males. 
+The study is attempting to see how effective a COVID-19 vaccination is, then breaking it down into different categories such as male. With males conducted in the study it can be see through the data the vaccination is highly effective. All sets of provided data support this statement. Graphical results conclude that 65% of those who took the placebo vaccine got infected with COVID-19, where as 30% who received the vaccine got the virus. The numerical results show 3% of those who had the placebo  were infected with the virus and 1% who received the COVID-19 vaccine caught the virus. Inferential results inform us of the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID-19. As well as the p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine. Lastly the efficacy conclusion was the vaccination was 59% effective. With all these results the COVID-19 vaccine made is highly effective when it comes to males. 
 
 # Females
 
@@ -110,7 +110,7 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-Graphical results for females in the vaccination study, it shows that the COVID 19 vaccine is working. Almost 60%% of those who took the placebo vaccine got infected with COVID, where as a little over 40% who were vaccinated got the virus. However about 50 % who were vaccinated remained uninfected.  
+Graphical results for females in the vaccination study, it shows that the COVID 19 vaccine is working. Almost 60% of those who took the placebo vaccine got infected with COVID, where as a little over 40% who were vaccinated got the virus. However about 50 % who were vaccinated remained uninfected.  
   
 
 ## Numerical Results
@@ -150,6 +150,9 @@ The study shows that the vaccine with females is 59% effective. With the high co
  
   
 ## Conclusion
+
+Another category the study was divided into is the effect of the vaccine on females. After examining the data it can be seen the vaccination for females is effective. The graphical results show 60% of those who took the placebo vaccine got infected with COVID, where as 40% who were vaccinated got the virus. The numerical results show both those with the placebo and vaccination, 2% got infected with the virus. Inferential results show the odds ratio telling us that females who took the placebo are 1.43% less like to contract the virus than those who received the vaccine.The small p value shows if there were no difference between females who took placebo and the COVID vaccine. The efficacy results conclude that the vaccination is 59% effective. Females have the same efficacy result as males do, this helps re enforce that the vaccination for females is effective.  
+
 
 
 # LGBTQ
