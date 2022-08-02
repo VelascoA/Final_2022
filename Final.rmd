@@ -248,7 +248,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-The graphical results for those who use drugs is ineffective. With 85% of those eho took the vaccinece still contracting COVID and only about 15% of those who took the placebo getting the vurus. Proving that that the vaccination is no good for drug users.
+The graphical results for those who use drugs is ineffective. With 85% of those who took the vaccine still contracting COVID and only about 15% of those who took the placebo getting the virus. Proving that that the vaccination is no good for drug users.
 
 
 ## Numerical Results
@@ -281,12 +281,11 @@ print(Deffic)
 print(Defficlo)
 print(Deffichi)
 ```
-The efficacy test shows the vaccine fir the LGBTQ community is 15% effective. Having the highest confidence levels of `r Deffichi` and the smallest confidence intervals of `r Defficlo`. 
+The efficacy test shows the vaccine for drug users is 15% effective. Having the highest confidence levels of `r Deffichi` and the smallest confidence intervals of `r Defficlo`. 
 
 ## Conclusion 
 
-
-
+The last group to be examined by the study is drug users. The vaccine is ineffective for those who use drugs. It can be seen as early as the graphical result that show, 85% of those who took the vaccine still contracting COVID and only about 15% of those who took the placebo getting the virus. The numerical results show 97% of those vaccinated with the vaccine remained okay but 99.4% of those who were given the placebo remained okay, informing us the vaccine is in effective.The inferential results give us the odds ratio of .2 with and estimated .178 telling us that those who received the placebo  are .178 times more likely to contract the virus. Lastly  the efficacy results conclude the vaccine is only 15% effective. Slightly more effective for drug users than for the LGBTQ community but still not close to as effective as stright non drug using males and females. 
 
 
 # Overall final Conclusion 
