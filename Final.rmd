@@ -47,7 +47,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
-  The graphic results in the study for males show that the COVID 19 vaccine is working. About 65% of those who took the placebo vaccine got infected with COVID, where as about 30% who were vaccinated go the virus. However about 50 % who were vaccinated remained uninfected.  
+  The graphic results in the study for males show that the COVID 19 vaccine is working. About 65% of those who took the placebo vaccine got infected with COVID, where as about 30% who were vaccinated got the virus. However about 50 % who were vaccinated remained uninfected.  
   
 ## Numerical Results  
   
@@ -66,7 +66,7 @@ fishtestM<-fisher.test(table1)
 fishtestM
 ```
 
-The inferential results for males show us the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID 19. The p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine.  
+The inferential results for males show us the odds ratio of 2 telling us that 2.09% of those who took the placebo are more likely to contract COVID-19. The p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine.  
   
 ## Efficacy 
 
@@ -80,11 +80,11 @@ print(malefficlo)
 print(maleffichi)
 ```
   
-  The study shows that the vaccine with males is 59% effective, the high confidence level of `r maleffichi` and the lowest confidence interval of `r malefficlo`. 
+  The study shows that the vaccine with males is 59% effective, the high confidence level of `r maleffichi` and the lowest confidence interval of `r malefficlo` efficacy. 
   
 ## Conclusion
 
-The study is attempting to see how effective a COVID-19 vaccination is, then breaking it down into different categories such as male. With males conducted in the study it can be see through the data the vaccination is highly effective. All sets of provided data support this statement. Graphical results conclude that 65% of those who took the placebo vaccine got infected with COVID-19, where as 30% who received the vaccine got the virus. The numerical results show 3% of those who had the placebo  were infected with the virus and 1% who received the COVID-19 vaccine caught the virus. Inferential results inform us of the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID-19. As well as the p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine. Lastly the efficacy conclusion was the vaccination was 59% effective. With all these results the COVID-19 vaccine made is highly effective when it comes to males. 
+The study is attempting to see how effective a COVID-19 vaccination is, then breaking it down into different categories such as male. With males conducted in the study it can be see through the data the vaccination is highly effective. Graphical results conclude that 65% of those who took the placebo vaccine got infected with COVID-19, where as 30% who received the vaccine got the virus. The numerical results show 3% of those who had the placebo  were infected with the virus and 1% who received the COVID-19 vaccine caught the virus. Inferential results inform us of the odds ratio of 2 telling us that 2.09% of those who took the placebo are less likely to contract COVID-19. As well as the p value being so small shows that the chances if there were no difference between males who received the placebo and who had gotten the vaccine. Lastly the efficacy conclusion was the vaccination was 59% effective. With all these results the COVID-19 vaccine made is highly effective when it comes to males. 
 
 # Females
 
@@ -110,7 +110,8 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-Graphical results for females in the vaccination study, it shows that the COVID 19 vaccine is working. Almost 60% of those who took the placebo vaccine got infected with COVID, where as a little over 40% who were vaccinated got the virus. However about 50 % who were vaccinated remained uninfected.  
+
+Graphical results for females in the vaccination study, shows the COVID 19 vaccine is working. Almost 60% of those who took the placebo vaccine got infected with COVID, where as a little over 40% who were vaccinated got the virus. However about 50 % who were vaccinated remained uninfected.  
   
 
 ## Numerical Results
@@ -120,7 +121,8 @@ table2 <- xtabs(~infected + treatment, data=Females)
 rowPerc(table2)
 colPerc(table2)
 ```
-  The numerical results for females show both groups, vaccinated and the placebo, in the study had 2% got infected with the COVID 19 virus. 
+  
+  The numerical results for females show both groups, vaccinated and those with the placebo, 2% got infected with the virus. 
 
 
 ## Inferential Results 
@@ -132,7 +134,7 @@ fishtestf<-fisher.test(table2)
 fishtestf
 ```
 
- The odd ratio tells us that females who took the placebo are 1.43% less like to contract than those who received the vaccine.The p value shows if there were no difference between females who took placebo and the COVID 19 vaccine. 
+ The odd ratio tells us that females who took the placebo are 1.43% more likely to contract than those who received the vaccine.The p value shows if there were no difference between females who took placebo and the COVID vaccine. 
  
 ## Efficacy  
 
@@ -151,7 +153,7 @@ The study shows that the vaccine with females is 59% effective. With the high co
   
 ## Conclusion
 
-Another category the study was divided into is the effect of the vaccine on females. After examining the data it can be seen the vaccination for females is effective. The graphical results show 60% of those who took the placebo vaccine got infected with COVID, where as 40% who were vaccinated got the virus. The numerical results show both those with the placebo and vaccination, 2% got infected with the virus. Inferential results show the odds ratio telling us that females who took the placebo are 1.43% less like to contract the virus than those who received the vaccine.The small p value shows if there were no difference between females who took placebo and the COVID vaccine. The efficacy results conclude that the vaccination is 59% effective. Females have the same efficacy result as males do, this helps re enforce that the vaccination for females is effective.  
+Another category the study was divided into is the effect of the vaccine on females. After examining the data it can be seen the vaccination for females is effective. The graphical results show 60% of those who took the placebo vaccine got infected with COVID, where as 40% who were vaccinated got the virus. The numerical results show both those with the placebo and vaccination, 2% got infected with the virus. Inferential results show the odds ratio telling us that females who took the placebo are 1.43% less like to contract the virus than those who received the vaccine.The small p value shows if there were no difference between females who took placebo and the COVID vaccine. The efficacy results conclude that the vaccination is 59% effective. Females have the same efficacy result as males do, this helps enforce that the vaccination for females is effective.  
 
 
 
@@ -180,7 +182,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-Graphical results for the LGBTQ community show that the vaccine is not effective. It shows this by 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID 19. 
+Graphical results for the LGBTQ community show that the vaccine is not effective. It shows this by 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID. 
 
 ## Numerical Results
 
@@ -190,7 +192,7 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
- The numerical results show 3% who got the vaccine still got COVID, were as .5% who took the placebo got COVID. More people who took the vaccine contracted virus that those who took the placebo.  
+ The numerical results show 3% who got the vaccine still got COVID, were as .5% who took the placebo got the virus. More people who took the vaccine contracted virus that those who took the placebo.  
 
 ## Inferental Results
 
@@ -201,8 +203,7 @@ fishtestG<-fisher.test(table3)
 fishtestG
 ```
 
-
-From the inferential results the fisher exact test gives odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. The P value remaining so small shows how if there were to be no diffrence within the results. 
+From the inferential results the fisher exact test gives odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. The P value remaining so small shows how if there were to be no difference within the results of those in the community vaccinated or not. 
 
 ## Efficacy
 
@@ -216,11 +217,12 @@ print(Geffic)
 print(Gefficlo)
 print(Geffichi)
 ```
- The efficacy test shows the vaccine fir the LGBTQ community is 13% effective. Having the highest confidence levels of `r Geffichi` and the smallest confidence intervals of `r Gefficlo`. 
+ 
+ The efficacy test shows the vaccine for the LGBTQ community is 13% effective. Having the highest confidence levels of `r Geffichi` and the smallest confidence intervals of `r Gefficlo`. 
 
 ## Conclusion
 
-The third group the study is divide into is LGBTQ and how the vaccination effects the community. The data shows the vaccination is not effective for those in the LGBQ community. The graphical results show 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID. Numerical results show that 3% who got the vaccine still got COVID, were as .5% who took the placebo got the virus. The inferential result show odds ratio of .143, telling us that those who received the placebo  are .143 times more likely to contract the virus. The p value shows if there were o difference between those who are LGBTQ who revived the vaccine and those who received the placebo. The efficacy results conclude the vaccine is 13% effective. The vaccination is extremely less effective then for straight males and females. Overall the vaccination for the LGBTQ is worse than taking the placebo. 
+The third group the study is divide into is LGBTQ and how the vaccination effects the community. The data shows the vaccination is not effective for those in the LGBTQ community. The graphical results show 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID. Numerical results show that 3% who got the vaccine still got COVID, were as .5% who took the placebo got the virus. The inferential result show odds ratio of .143, telling us that those who received the placebo  are .143 times less likely to contract the virus. The efficacy results conclude the vaccine is 13% effective. The vaccination is extremely less effective then for straight males and females. Overall the vaccination for the LGBTQ is worse than taking the placebo. 
 
 
 
@@ -248,7 +250,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-The graphical results for those who use drugs is ineffective. With 85% of those who took the vaccine still contracting COVID and only about 15% of those who took the placebo getting the virus. Proving that that the vaccination is no good for drug users.
+The graphical results for those who use drugs is ineffective. With 85% of those who took the vaccine still contracting COVID and only about 15% of those who took the placebo getting the virus. This displays that the vaccination is no good for drug users.
 
 
 ## Numerical Results
@@ -268,7 +270,8 @@ fishtestD<-fisher.test(table4)
 fishtestD
 ```
 
-The inferential results give us the odds ratio of .2 with and estimated .178 telling us that those who received the placebo  are .178 times more likely to contract the virus. The P value remaining so small shows how if there were to be no difference within the results. 
+
+The inferential results give us the odds ratio of .2 with and estimated .178% telling us that those who received the placebo  are .178% times more likely to contract the virus. The P value remaining so small shows  if there were to be no difference within the results of drug users who are vaccinated and those with the placebo. 
 
 ## Efficacy
 
@@ -285,12 +288,12 @@ The efficacy test shows the vaccine for drug users is 15% effective. Having the 
 
 ## Conclusion 
 
-The last group to be examined by the study is drug users. The vaccine is ineffective for those who use drugs. It can be seen as early as the graphical result that show, 85% of those who took the vaccine still contracting COVID and only about 15% of those who received the placebo getting the virus. The numerical results show 97% of those vaccinated with the vaccine remained okay but 99.4% of those who were given the placebo remained okay, informing us the vaccine is in effective.The inferential results give us the odds ratio of .2 with and estimated .178 telling us that those who received the placebo  are .178 times more likely to contract the virus. Lastly  the efficacy results conclude the vaccine is only 15% effective. Slightly more effective for drug users than for the LGBTQ community but still not close to as effective as straight non drug using males and females. 
+The last group to be examined by the study is drug users. The vaccine is ineffective for those who use drugs. It can be seen as early as the graphical results that show, 85% of those who took the vaccine still contracted COVID and only about 15% of those who received the placebo caught the virus. The numerical results show 97% of those vaccinated remained okay but 99.4% of those who were given the placebo remained okay, informing us the vaccine is in effective.The inferential results give us the odds ratio of .2  and are .178% times less likely to contract the virus. Lastly the efficacy results conclude the vaccine is only 15% effective. Slightly more effective for drug users than for the LGBTQ community but still not close to as effective as straight non drug using males and females. 
 
 
 # Overall final Conclusion 
 
-The study being examined is if the COVID-19 vaccination is effective and how it effects different groups of individuals. Going through the groups of males, females, LGBTQ, and drug users the vaccination has different effects through out. For males it can be seen that the vaccination is greatly effective with efficacy results concluding it is 59% effective and the numerical results stating 1% who received vaccine caught the virus. After looking at the results foe females it can be seen that the vaccination is just as effective. With matching efficacy result of 59%, the inferential results showing those who got the placebo are 1.43% less like to contract than those who received the vaccine. 
+The study being examined is if the COVID-19 vaccination is effective and how it effects different groups of individuals. Going through the groups of males, females, LGBTQ, and drug users the vaccination has different effects through out. For males it can be seen that the vaccination is greatly effective with efficacy results concluding it is 59% effective and the numerical results stating 1% who received vaccine caught the virus. After looking at the results for females it can be seen that the vaccination is just as effective. With matching efficacy result of 59%, the inferential results showing those who got the placebo are 1.43% more likely to contract COVID than those who received the vaccine. 
 
-However when starting to look into the two other groups the results start to change drastically. For the LGBTQ community the vaccine is not effective. All the data points to this graphical results for the LGBTQ show 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID. The efficacy results show the vaccine is only 13% effective with numerical results showing 3% who got the vaccine still got COVID, were as .5% who took the placebo got COVID. Then looking at drug users the results again change but only slightly. The numerical results show 3% of those who received the vaccine contracted COVID where .6% of those with the placebo vaccination caught the virus, with the efficacy at 15%. All the data points at the vaccination can be effective but only for straight non drug using males and females. the data also points that for those in the LGBTQ community and those who use drugs the vaccination does not work and could possibly help you catch COVID 19. 
+However when starting to look into the two other groups the results start to change drastically. For the LGBTQ community the vaccine is not effective. All the data points to this graphical results for the LGBTQ show 80% of those who received the vaccine contracted the virus where around only 10% who took the placebo caught COVID, making it worse to get the vaccine. The efficacy results show the vaccine is only 13% effective. Lastly looking at drug users the results again change but only slightly. The numerical results show 3% of those who received the vaccine contracted COVID where .6% of those with the placebo  caught the virus, with the efficacy results at 15%. After looking at all the data the vaccination can be effective but only for straight non drug using males and females. The data also points out that for those in the LGBTQ community and those who use drugs the vaccination does not work, and helps them catch COVID.  
 
